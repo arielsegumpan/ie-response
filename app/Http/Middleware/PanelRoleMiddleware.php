@@ -26,11 +26,7 @@ class PanelRoleMiddleware
         // Define panel-to-role mapping
         $panelRoles = [
             'admin' => 'super_admin',
-<<<<<<< HEAD
             'responder' => 'responder',
-=======
-            'responder' => ['responder'],
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
         ];
 
         $requiredRoles = $panelRoles[$currentPanelId] ?? [];
@@ -40,16 +36,10 @@ class PanelRoleMiddleware
                 return redirect()->to(Filament::getPanel('admin')->getUrl());
             }
 
-<<<<<<< HEAD
             if ($user->hasRole('responder')) {
                 return redirect()->to(Filament::getPanel('responder')->getUrl());
             }
 
-=======
-            if ($user->hasAnyRole(['responder'])) {
-                return redirect()->to(Filament::getPanel('responder')->getUrl());
-            }
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             return redirect()->route('filament.auth.auth.login');
         }
 

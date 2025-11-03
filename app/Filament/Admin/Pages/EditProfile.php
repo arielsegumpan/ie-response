@@ -2,7 +2,6 @@
 
 namespace App\Filament\Admin\Pages;
 
-<<<<<<< HEAD
 use Filament\Forms\Form;
 use Filament\Pages\Page;
 use Filament\Actions\Action;
@@ -115,13 +114,4 @@ class EditProfile extends Page implements HasForms
 
         return redirect()->to(static::getUrl());
     }
-=======
-use Filament\Pages\Page;
-
-class EditProfile extends Page
-{
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
-
-    protected static string $view = 'filament.admin.pages.edit-profile';
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

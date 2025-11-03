@@ -32,11 +32,7 @@ class Isugid extends Component
 
     #[Computed()]
     public function incidentTypes(){
-<<<<<<< HEAD
         return IncidentType::query()->get();
-=======
-        return IncidentType::all();
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     }
 
     protected function rules(): array

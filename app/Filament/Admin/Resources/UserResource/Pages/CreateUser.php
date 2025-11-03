@@ -2,22 +2,15 @@
 
 namespace App\Filament\Admin\Resources\UserResource\Pages;
 
-<<<<<<< HEAD
 use Filament\Actions;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Resources\Pages\CreateRecord;
 use App\Filament\Admin\Resources\UserResource;
-=======
-use App\Filament\Admin\Resources\UserResource;
-use Filament\Actions;
-use Filament\Resources\Pages\CreateRecord;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
 class CreateUser extends CreateRecord
 {
     protected static string $resource = UserResource::class;
-<<<<<<< HEAD
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
@@ -47,6 +40,4 @@ class CreateUser extends CreateRecord
             ]);
         }
     }
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

@@ -21,8 +21,4 @@ Route::get('/contact', Contact::class)->name('page.contact');
 Route::get('/incidents/{incident_number}', Incidents::class)->name('page.incident.show');
 Route::get('/category/{slug}', CategoryPosts::class)->name('page.blog.category');
 Route::get('/tag/{slug}', TagPosts::class)->name('page.blog.tag');
-<<<<<<< HEAD
 Route::get('/respo', Volunteer::class)->name('page.responder');
-=======
-Route::get('/responder', Volunteer::class)->name('page.responder');
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2

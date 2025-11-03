@@ -21,14 +21,11 @@ class EditIncident extends EditRecord
     {
         return $this->getResource()::getUrl('index');
     }
-<<<<<<< HEAD
 
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
-       
+
         return $data;
     }
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

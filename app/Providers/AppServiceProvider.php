@@ -2,13 +2,10 @@
 
 namespace App\Providers;
 
-<<<<<<< HEAD
 use App\Models\Incident;
 use App\Models\Volunteer;
 use App\Observers\IncidentObserver;
 use App\Observers\ResponderObserver;
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use App\Http\Responses\LogoutResponse;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Session;

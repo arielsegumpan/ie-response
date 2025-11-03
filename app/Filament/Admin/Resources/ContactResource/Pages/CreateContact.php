@@ -14,7 +14,6 @@ class CreateContact extends CreateRecord
     {
         return $this->getResource()::getUrl('index');
     }
-<<<<<<< HEAD
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
@@ -24,6 +23,4 @@ class CreateContact extends CreateRecord
         $data['message'] = ucfirst($data['message']);
         return $data;
     }
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

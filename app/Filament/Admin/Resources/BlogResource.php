@@ -33,10 +33,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\ToggleButtons;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
-<<<<<<< HEAD
 use Filament\Infolists\Components\KeyValueEntry;
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Admin\Resources\BlogResource\Pages;
 use Filament\Infolists\Components\Group as InfoGroup;

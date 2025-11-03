@@ -16,7 +16,6 @@ class EditUser extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
-<<<<<<< HEAD
 
 
     protected function mutateFormDataBeforeFill(array $data): array
@@ -67,6 +66,4 @@ class EditUser extends EditRecord
         }
     }
 
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

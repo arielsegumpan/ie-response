@@ -7,7 +7,6 @@ use Filament\Tables;
 use App\Models\Contact;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-<<<<<<< HEAD
 use Filament\Infolists\Infolist;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Group;
@@ -26,13 +25,6 @@ use Filament\Infolists\Components\Group as InfoGroup;
 use Filament\Infolists\Components\Split as InfoSplit;
 use App\Filament\Admin\Resources\ContactResource\Pages;
 use Filament\Infolists\Components\Section as infoSection;
-=======
-use Filament\Resources\Resource;
-use Filament\Tables\Columns\TextColumn;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Admin\Resources\ContactResource\Pages;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use App\Filament\Admin\Resources\ContactResource\RelationManagers;
 
 class ContactResource extends Resource
@@ -45,7 +37,6 @@ class ContactResource extends Resource
     {
         return $form
             ->schema([
-<<<<<<< HEAD
                 Split::make([
                     Group::make([
                         Section::make()
@@ -128,13 +119,6 @@ class ContactResource extends Resource
     }
 
     public static function table(Table $table): Table
-=======
-                //
-            ]);
-    }
-
-     public static function table(Table $table): Table
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     {
         return $table
             ->columns([
@@ -154,14 +138,10 @@ class ContactResource extends Resource
                 TextColumn::make('email')
                     ->label(__('Email'))
                     ->searchable()
-<<<<<<< HEAD
                     ->sortable()
                     ->icon('heroicon-m-envelope')
                     ->badge()
                     ->color('primary'),
-=======
-                    ->sortable(),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                 TextColumn::make('subject')
                     ->label(__('Subject'))
                     ->searchable()
@@ -170,13 +150,9 @@ class ContactResource extends Resource
                 TextColumn::make('status')
                     ->label(__('Status'))
                     ->searchable()
-<<<<<<< HEAD
                     ->sortable()
                     ->badge()
                     ->color('success'),
-=======
-                    ->sortable(),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ])
             ->filters([
                 //
@@ -219,7 +195,6 @@ class ContactResource extends Resource
             'edit' => Pages\EditContact::route('/{record}/edit'),
         ];
     }
-<<<<<<< HEAD
 
 
 
@@ -295,6 +270,4 @@ class ContactResource extends Resource
                 ->from('md')
             ]);
     }
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

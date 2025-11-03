@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class IndexPage extends Component
 {
 
-<<<<<<< HEAD
     // public $incidents;
-=======
-    public $incidents;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
     #[Computed()]
     public function featuredPosts()
@@ -66,10 +62,6 @@ class IndexPage extends Component
     #[Title('Home')]
     public function render()
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
         return view('livewire.pages.index-page');
     }
 }

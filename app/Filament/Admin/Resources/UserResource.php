@@ -31,11 +31,7 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
-<<<<<<< HEAD
     protected static ?string $navigationGroup = 'Roles & Permissions';
-=======
-    protected static ?string $navigationGroup = 'Users & Roles';
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
     public static function form(Form $form): Form
     {
@@ -45,7 +41,6 @@ class UserResource extends Resource
                     Section::make('User Details')
                     ->description('The user\'s name and email address.')
                     ->schema([
-<<<<<<< HEAD
 
                         Group::make([
 
@@ -67,11 +62,6 @@ class UserResource extends Resource
                             'md' => 2,
                             'lg' => 2
                         ]),
-=======
-                        TextInput::make('name')
-                        ->required()
-                        ->maxLength(255),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
                         TextInput::make('email')
                         ->required()
@@ -93,23 +83,6 @@ class UserResource extends Resource
                         ->visible(fn (Page $livewire): bool => $livewire instanceof Pages\CreateUser),
                     ])
                     ->columns(1),
-<<<<<<< HEAD
-=======
-
-                    Group::make([
-                        Section::make('Department')
-                        ->schema([
-                            Select::make('department_id')
-                            ->relationship(name: 'department', titleAttribute: 'dept_name')
-                            ->preload()
-                            ->searchable()
-                            ->native(false)
-                            ->required()
-                            ->optionsLimit(6)
-                            ->getOptionLabelUsing(fn ($value): ?string => Str::replace('_', ' ', Str::ucwords($value)))
-                        ]),
-                    ])
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                 ])
                 ->columns([
                     'sm' => 1,

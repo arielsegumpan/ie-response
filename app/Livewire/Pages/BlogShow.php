@@ -6,11 +6,7 @@ use App\Models\Blog;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Computed;
-<<<<<<< HEAD
 use Livewire\Attributes\Locked;
-=======
-use Illuminate\Database\Eloquent\Collection;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
 class BlogShow extends Component
 {

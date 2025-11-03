@@ -76,7 +76,6 @@ class Volunteer extends Component
         ];
     }
 
-<<<<<<< HEAD
 
     public function mount()
     {
@@ -97,13 +96,6 @@ class Volunteer extends Component
                 ->get()
                 ->toArray();
         });
-=======
-    #[Computed()]
-    public function mount()
-    {
-        $this->regions =  PhilippineRegion::query()->orderBy('name')->get(); //nag dugang query() method
-        $this->organizations = Organization::all();
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     }
 
     public function updatedSelectedRegion($value)

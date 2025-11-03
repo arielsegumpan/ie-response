@@ -6,24 +6,14 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
-<<<<<<< HEAD
 use Filament\Navigation\MenuItem;
 use Filament\Support\Colors\Color;
 use Filament\Http\Middleware\Authenticate;
 use App\Filament\Responder\Pages\EditProfile as EditProf;
-=======
-use Filament\Support\Colors\Color;
-use Illuminate\Support\Facades\URL;
-use Filament\Http\Middleware\Authenticate;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use App\Http\Middleware\PanelRoleMiddleware;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
-<<<<<<< HEAD
-=======
-use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -35,7 +25,6 @@ class ResponderPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
-<<<<<<< HEAD
         return $panel
             ->id('responder')
             ->path('responder')
@@ -45,15 +34,6 @@ class ResponderPanelProvider extends PanelProvider
             ->brandLogoHeight('3rem')
             ->favicon(asset('imgs/ie-logo.png'))
             ->sidebarWidth('17rem')
-=======
-        URL::forceScheme('https');
-        return $panel
-            ->id('responder')
-            ->path('responder')
-            ->brandLogo(asset('imgs/ie-logo.png'))
-            ->brandLogoHeight('3rem')
-            ->favicon(asset('imgs/ie-logo.png'))
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ->discoverResources(in: app_path('Filament/Responder/Resources'), for: 'App\\Filament\\Responder\\Resources')
             ->discoverPages(in: app_path('Filament/Responder/Pages'), for: 'App\\Filament\\Responder\\Pages')
             ->pages([
@@ -61,13 +41,8 @@ class ResponderPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Responder/Widgets'), for: 'App\\Filament\\Responder\\Widgets')
             ->widgets([
-<<<<<<< HEAD
                 // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class,
-=======
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -83,7 +58,6 @@ class ResponderPanelProvider extends PanelProvider
             ->authMiddleware([
                 PanelRoleMiddleware::class
             ])
-<<<<<<< HEAD
             ->databaseNotifications()
             ->userMenuItems([
                 MenuItem::make()
@@ -93,10 +67,6 @@ class ResponderPanelProvider extends PanelProvider
             ])
             ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
-=======
-            ->plugins([
-                FilamentShieldPlugin::make(),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ]);
     }
 }

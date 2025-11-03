@@ -22,10 +22,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-<<<<<<< HEAD
 use Filament\Infolists\Components\Section as InfoSection;
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use App\Filament\Admin\Resources\OrganizationResource\Pages;
 use App\Filament\Admin\Resources\OrganizationResource\RelationManagers;
 

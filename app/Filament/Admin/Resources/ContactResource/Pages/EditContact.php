@@ -21,7 +21,6 @@ class EditContact extends EditRecord
     {
         return $this->getResource()::getUrl('index');
     }
-<<<<<<< HEAD
 
     protected function mutateFormDataBeforeSave(array $data): array
     {
@@ -31,6 +30,4 @@ class EditContact extends EditRecord
         $data['message'] = ucfirst($data['message']);
         return $data;
     }
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

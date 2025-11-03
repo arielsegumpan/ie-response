@@ -7,11 +7,7 @@ use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-<<<<<<< HEAD
 use App\Filament\Auth\Pages\Register;
-=======
-use Illuminate\Support\Facades\URL;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Filament\Http\Middleware\Authenticate;
 use App\Http\Middleware\PanelRoleMiddleware;
 use Illuminate\Session\Middleware\StartSession;
@@ -35,17 +31,11 @@ class AuthPanelProvider extends PanelProvider
             ->path('auth')
             ->login()
             ->registration()
-<<<<<<< HEAD
             ->font('Poppins')
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ->brandLogo(asset('imgs/ie-logo.png'))
             ->brandLogoHeight('5rem')
             ->favicon(asset('imgs/ie-logo.png'))
-<<<<<<< HEAD
             ->registration(Register::class)
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
@@ -54,10 +44,6 @@ class AuthPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-<<<<<<< HEAD
-=======
-                Widgets\FilamentInfoWidget::class,
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
             ])
             ->middleware([
                 EncryptCookies::class,

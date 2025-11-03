@@ -1,14 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 namespace App\Filament\Admin\Resources;
-=======
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
-namespace App\Filament\Responder\Resources;
-========
-namespace App\Filament\Admin\Resources;
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
 use Filament\Forms;
 use Filament\Tables;
@@ -20,10 +12,7 @@ use Filament\Tables\Table;
 use App\Enums\PriorityEnum;
 use Illuminate\Support\Str;
 use App\Models\IncidentType;
-<<<<<<< HEAD
 use Filament\Infolists\Infolist;
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Filament\Resources\Resource;
 use App\Enums\IncidentStatusEnum;
 use Dotswan\MapPicker\Fields\Map;
@@ -38,43 +27,26 @@ use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
-<<<<<<< HEAD
 use Dotswan\MapPicker\Infolists\MapEntry;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
-=======
-use Filament\Forms\Components\FileUpload;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Filament\Pages\SubNavigationPosition;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Infolists\Components\Fieldset;
 use Filament\Forms\Components\ToggleButtons;
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
+
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Infolists\Components\Group as InfoGroup;
 use Filament\Infolists\Components\Section as InfoSec;
-<<<<<<< HEAD
 use App\Filament\Admin\Resources\IncidentResource\Pages;
 use App\Filament\Admin\Resources\IncidentResource\RelationManagers;
 use App\Filament\Admin\Resources\IncidentResource\Widgets\IncidentReports;
 use App\Filament\Admin\Resources\IncidentResource\Widgets\IncidentsOverview;
 use App\Filament\Admin\Resources\IncidentResource\Widgets\IncidentsWidgetOverview;
 use App\Filament\Admin\Resources\IncidentResource\Widgets\IncidentStatsTableOverview;
-=======
-use App\Filament\Responder\Resources\IncidentResource\Pages;
-use App\Filament\Responder\Resources\IncidentResource\RelationManagers;
-========
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Admin\Resources\IncidentResource\Pages;
-use App\Filament\Admin\Resources\IncidentResource\RelationManagers;
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
 class IncidentResource extends Resource
 {
@@ -100,13 +72,6 @@ class IncidentResource extends Resource
                         Section::make()
                         ->schema([
 
-<<<<<<< HEAD
-=======
-                            Hidden::make('user_id')
-                            ->default(auth()->user()->id)
-                            ->dehydrated(),
-
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                             TextInput::make('incident_number')
                             ->label('Incident Number')
                             ->required()
@@ -183,7 +148,6 @@ class IncidentResource extends Resource
 
                         ]),
 
-<<<<<<< HEAD
                         Section::make('Persons Involved')
                         ->schema([
                             Repeater::make('involved')
@@ -211,8 +175,6 @@ class IncidentResource extends Resource
 
                         ]),
 
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                         Section::make('Upload Attachments')
                         ->schema([
 
@@ -353,22 +315,10 @@ class IncidentResource extends Resource
 
 
                         Group::make([
-<<<<<<< HEAD
                             RichEditor::make('recommendations')
                             ->label('Recommendations')
                             ->columnSpanFull()
 
-=======
-                            Textarea::make('location_description')
-                            ->label('Location Description')
-                            ->maxLength(65535)
-                            ->rows(6),
-
-                            Textarea::make('landmark')
-                            ->label('Landmark')
-                            ->maxLength(65535)
-                            ->rows(6),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                         ])
 
 
@@ -472,23 +422,7 @@ class IncidentResource extends Resource
                 ->label('Verified By')
                 ->sortable()
                 ->searchable()
-<<<<<<< HEAD
                 ->placeholder('Not Verified'),
-=======
-                ->placeholder('Not Verified')
-                ->formatStateUsing(function ($state, $record) {
-                    if (!$state) {
-                        return 'Not Verified';
-                    }
-                    if ($record->verified_by === auth()->id()) {
-                        return 'You';
-                    }
-                    return $state;
-                })
-                ->badge()
-                ->color('success')
-                ->icon('heroicon-s-check-circle'),
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
                 TextColumn::make('created_at')
                 ->label('Reported At')
@@ -539,25 +473,11 @@ class IncidentResource extends Resource
             'index' => Pages\ListIncidents::route('/'),
             'create' => Pages\CreateIncident::route('/create'),
             'edit' => Pages\EditIncident::route('/{record}/edit'),
-<<<<<<< HEAD
+
             'view' => Pages\ViewIncident::route('/{record}'),
         ];
     }
-=======
-        ];
-    }
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 
-    public static function getRecordSubNavigation(Page $page): array
-    {
-        return $page->generateNavigationItems([
-            Pages\ViewIncident::class,
-            Pages\EditIncident::class,
-        ]);
-    }
-
-<<<<<<< HEAD
      public static function getWidgets(): array
     {
         return [
@@ -565,8 +485,6 @@ class IncidentResource extends Resource
         ];
     }
 
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     public static function infolist(Infolist $infolist): Infolist
     {
         return $infolist
@@ -766,11 +684,7 @@ class IncidentResource extends Resource
                 InfoSec::make()
                 ->schema([
                     RepeatableEntry::make('images')
-<<<<<<< HEAD
                     ->label('Incident Images')
-=======
-                    ->label('Attachments')
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                     ->schema([
                         ImageEntry::make('image_path')
                         ->hiddenLabel()
@@ -785,9 +699,4 @@ class IncidentResource extends Resource
                 ]),
             ]);
     }
-<<<<<<< HEAD
-=======
-========
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

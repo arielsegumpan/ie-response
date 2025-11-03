@@ -2,10 +2,6 @@
 
 namespace App\Filament\Admin\Resources\VolunteerResource\Pages;
 
-<<<<<<< HEAD
-=======
-use App\Filament\Admin\Resources\VolunteerResource;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Filament\Actions;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Resources\Pages\CreateRecord;

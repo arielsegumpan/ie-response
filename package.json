@@ -17,11 +17,7 @@
     },
     "dependencies": {
         "leaflet": "^1.9.4",
-<<<<<<< HEAD
         "preline": "^3.2.3",
         "tw-prose": "^0.0.10"
-=======
-        "preline": "^3.2.3"
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     }
 }

@@ -5,23 +5,16 @@ namespace App\Filament\Admin\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
-<<<<<<< HEAD
 use Filament\Pages\Page;
 use App\Models\Volunteer;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Filament\Infolists\Infolist;
-=======
-use App\Models\Volunteer;
-use Filament\Tables\Table;
-use Illuminate\Support\Str;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Filament\Resources\Resource;
 use App\Enums\AvailabilityStatusEnum;
 use App\Enums\VerificationStatusEnum;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Section;
-<<<<<<< HEAD
 use Filament\Support\Enums\FontWeight;
 use Filament\Infolists\Components\Tabs;
 use Filament\Tables\Columns\TextColumn;
@@ -38,13 +31,6 @@ use Filament\Infolists\Components\Tabs\Tab;
 use Filament\Forms\Components\ToggleButtons;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\RepeatableEntry;
-=======
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\RichEditor;
-use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\ToggleButtons;
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Admin\Resources\VolunteerResource\Pages;
 use App\Filament\Admin\Resources\VolunteerResource\RelationManagers;
@@ -55,7 +41,6 @@ class VolunteerResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-face-smile';
 
-<<<<<<< HEAD
     protected static ?string $modelLabel = 'Responder';
 
     // Change the plural model label
@@ -71,8 +56,6 @@ class VolunteerResource extends Resource
         return 'Manage Responders';
     }
 
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     public static function form(Form $form): Form
     {
         return $form
@@ -82,11 +65,7 @@ class VolunteerResource extends Resource
                 ->schema([
 
                     Select::make('user_id')
-<<<<<<< HEAD
                     ->relationship(name: 'user', titleAttribute: 'name')
-=======
-                    ->relationship(name: 'user', titleAttribute: 'name', ignoreRecord: true)
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                     ->required()
                     ->searchable()
                     ->preload()
@@ -95,11 +74,7 @@ class VolunteerResource extends Resource
                     ->getOptionLabelUsing(fn($record) => ucwords($record->name)),
 
                     Select::make('organization_id')
-<<<<<<< HEAD
                     ->relationship(name: 'organization', titleAttribute: 'org_name')
-=======
-                    ->relationship(name: 'organization', titleAttribute: 'org_name', ignoreRecord: true)
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                     ->required()
                     ->searchable()
                     ->preload()
@@ -271,7 +246,6 @@ class VolunteerResource extends Resource
             'index' => Pages\ListVolunteers::route('/'),
             'create' => Pages\CreateVolunteer::route('/create'),
             'edit' => Pages\EditVolunteer::route('/{record}/edit'),
-<<<<<<< HEAD
             'view' => Pages\ViewVolunteer::route('/{record}'),
         ];
     }
@@ -473,8 +447,4 @@ class VolunteerResource extends Resource
 
             ]);
     }
-=======
-        ];
-    }
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 }

@@ -1,10 +1,5 @@
 <?php
-
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
 namespace App\Filament\Responder\Resources;
-========
-namespace App\Filament\Admin\Resources;
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
 
 use Filament\Forms;
 use Filament\Tables;
@@ -35,7 +30,6 @@ use Filament\Pages\SubNavigationPosition;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Infolists\Components\Fieldset;
 use Filament\Forms\Components\ToggleButtons;
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\RepeatableEntry;
@@ -44,11 +38,7 @@ use Filament\Infolists\Components\Group as InfoGroup;
 use Filament\Infolists\Components\Section as InfoSec;
 use App\Filament\Responder\Resources\IncidentResource\Pages;
 use App\Filament\Responder\Resources\IncidentResource\RelationManagers;
-========
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Admin\Resources\IncidentResource\Pages;
-use App\Filament\Admin\Resources\IncidentResource\RelationManagers;
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
+
 
 class IncidentResource extends Resource
 {
@@ -471,7 +461,6 @@ class IncidentResource extends Resource
             'edit' => Pages\EditIncident::route('/{record}/edit'),
         ];
     }
-<<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource.php
 
     public static function getRecordSubNavigation(Page $page): array
     {
@@ -481,220 +470,218 @@ class IncidentResource extends Resource
         ]);
     }
 
-    public static function infolist(Infolist $infolist): Infolist
-    {
-        return $infolist
-            ->schema([
+    // public static function infolist(Infolist $infolist): Infolist
+    // {
+    //     return $infolist
+    //         ->schema([
 
-                InfoSec::make()
-                ->schema([
-                    MapEntry::make('location')
-                        ->draggable(false)
-                        ->zoom(17)
-                        ->minZoom(2)
-                        ->maxZoom(16)
-                        ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
-                        ->detectRetina(true)
+    //             InfoSec::make()
+    //             ->schema([
+    //                 MapEntry::make('location')
+    //                     ->draggable(false)
+    //                     ->zoom(17)
+    //                     ->minZoom(2)
+    //                     ->maxZoom(16)
+    //                     ->tilesUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png")
+    //                     ->detectRetina(true)
 
-                        // // Marker Configuration
-                        ->showMarker(true)
-                        ->markerIconSize([36, 36])
-                        ->markerIconClassName('my-marker-class')
-                        ->markerIconAnchor([18, 36])
+    //                     // // Marker Configuration
+    //                     ->showMarker(true)
+    //                     ->markerIconSize([36, 36])
+    //                     ->markerIconClassName('my-marker-class')
+    //                     ->markerIconAnchor([18, 36])
 
-                        // Controls
-                        ->showFullscreenControl(true)
-                        ->showZoomControl(true)
+    //                     // Controls
+    //                     ->showFullscreenControl(true)
+    //                     ->showZoomControl(true)
 
-                        // GeoMan Integration (if needed for viewing)
-                        ->geoMan(false)
-                        ->geoManEditable(false) // Usually false for infolist view
-                        ->geoManPosition('topleft')
-                        ->drawCircleMarker(false)
-                        ->drawMarker(false)
-                        ->drawPolygon(false)
-                        ->drawPolyline(false)
-                        ->drawCircle(false)
-                        ->drawRectangle(false)
-                        ->drawText(false)
+    //                     // GeoMan Integration (if needed for viewing)
+    //                     ->geoMan(false)
+    //                     ->geoManEditable(false) // Usually false for infolist view
+    //                     ->geoManPosition('topleft')
+    //                     ->drawCircleMarker(false)
+    //                     ->drawMarker(false)
+    //                     ->drawPolygon(false)
+    //                     ->drawPolyline(false)
+    //                     ->drawCircle(false)
+    //                     ->drawRectangle(false)
+    //                     ->drawText(false)
 
-                        // Styling
-                        ->extraStyles([
-                            'min-height: 50vh',
-                            'border-radius: 10px'
-                        ])
-                        // State Management
-                        ->state(function ($record) {
-                            return [
-                                'lat' => $record->location->latitude,
-                                'lng' => $record->location->longitude,
-                                'geojson' => $record->location->geojson
-                            ];
-                    }),
+    //                     // Styling
+    //                     ->extraStyles([
+    //                         'min-height: 50vh',
+    //                         'border-radius: 10px'
+    //                     ])
+    //                     // State Management
+    //                     ->state(function ($record) {
+    //                         return [
+    //                             'lat' => $record->location->latitude,
+    //                             'lng' => $record->location->longitude,
+    //                             'geojson' => $record->location->geojson
+    //                         ];
+    //                 }),
 
-                    InfoGroup::make([
-                        TextEntry::make('incident_number')
-                        ->weight(FontWeight::Bold)
-                        ->color('primary')
-                        ->label('Incident #')
-                        ->badge()
-                        ->color('primary')
-                        ->icon('heroicon-m-tag'),
+    //                 InfoGroup::make([
+    //                     TextEntry::make('incident_number')
+    //                     ->weight(FontWeight::Bold)
+    //                     ->color('primary')
+    //                     ->label('Incident #')
+    //                     ->badge()
+    //                     ->color('primary')
+    //                     ->icon('heroicon-m-tag'),
 
-                        TextEntry::make('type.inc_name')
-                        ->label('Incident Type')
-                        ->placeholder('-')
-                        ->size(TextEntry\TextEntrySize::Large)
-                        ->weight(FontWeight::Bold),
+    //                     TextEntry::make('type.inc_name')
+    //                     ->label('Incident Type')
+    //                     ->placeholder('-')
+    //                     ->size(TextEntry\TextEntrySize::Large)
+    //                     ->weight(FontWeight::Bold),
 
-                        TextEntry::make('reporter.name')
-                        ->label('Reported By')
-                        ->placeholder('Citizen')
-                        ->size(TextEntry\TextEntrySize::Large),
+    //                     TextEntry::make('reporter.name')
+    //                     ->label('Reported By')
+    //                     ->placeholder('Citizen')
+    //                     ->size(TextEntry\TextEntrySize::Large),
 
-                        TextEntry::make('verifier.name')
-                        ->label('Verified By')
-                        ->placeholder('-')
-                        ->size(TextEntry\TextEntrySize::Large),
+    //                     TextEntry::make('verifier.name')
+    //                     ->label('Verified By')
+    //                     ->placeholder('-')
+    //                     ->size(TextEntry\TextEntrySize::Large),
 
-                        TextEntry::make('priority')
-                        ->label('Priority')
-                        ->badge()
-                        ->color(function ($record) {
-                            return match ($record->priority) {
-                                'low' => 'success',
-                                'medium' => 'warning',
-                                'high' => 'danger',
-                                'critical' => 'danger',
-                            };
-                        })
-                        ->icon(function ($record) {
-                            return match ($record->priority) {
-                                'low' => 'heroicon-o-arrow-trending-down',
-                                'medium' => 'heroicon-o-arrows-right-left',
-                                'high' => 'heroicon-o-arrow-trending-up',
-                                'critical' => 'heroicon-o-arrow-trending-up',
-                            };
-                        })
-                        ->formatStateUsing(function ($state) {
-                            return PriorityEnum::from($state)->getLabel();
-                        }),
+    //                     TextEntry::make('priority')
+    //                     ->label('Priority')
+    //                     ->badge()
+    //                     ->color(function ($record) {
+    //                         return match ($record->priority) {
+    //                             'low' => 'success',
+    //                             'medium' => 'warning',
+    //                             'high' => 'danger',
+    //                             'critical' => 'danger',
+    //                         };
+    //                     })
+    //                     ->icon(function ($record) {
+    //                         return match ($record->priority) {
+    //                             'low' => 'heroicon-o-arrow-trending-down',
+    //                             'medium' => 'heroicon-o-arrows-right-left',
+    //                             'high' => 'heroicon-o-arrow-trending-up',
+    //                             'critical' => 'heroicon-o-arrow-trending-up',
+    //                         };
+    //                     })
+    //                     ->formatStateUsing(function ($state) {
+    //                         return PriorityEnum::from($state)->getLabel();
+    //                     }),
 
-                        TextEntry::make('status')
-                        ->label('Status')
-                        ->badge()
-                        ->color(function ($record) {
-                            return match ($record->status) {
-                                'reported' => 'warning',
-                                'verified' => 'success',
-                                'in_progress' => 'warning',
-                                'resolved' => 'success',
-                                'closed' => 'danger',
-                            };
-                        })
-                        ->icon(function ($record) {
-                            return match ($record->status) {
-                                'reported' => 'heroicon-s-flag',
-                                'verified' => 'heroicon-s-check-circle',
-                                'in_progress' => 'heroicon-s-arrow-path',
-                                'resolved' => 'heroicon-s-check-circle',
-                                'closed' => 'heroicon-s-x-circle',
-                                default => 'heroicon-s-clock',
-                            };
-                        })
-                        ->formatStateUsing(function ($state) {
-                            return match ($state) {
-                                'reported' => 'Reported',
-                                'verified' => 'Verified',
-                                'in_progress' => 'In Progress',
-                                'resolved' => 'Resolved',
-                                'closed' => 'Closed',
-                            };
-                        }),
+    //                     TextEntry::make('status')
+    //                     ->label('Status')
+    //                     ->badge()
+    //                     ->color(function ($record) {
+    //                         return match ($record->status) {
+    //                             'reported' => 'warning',
+    //                             'verified' => 'success',
+    //                             'in_progress' => 'warning',
+    //                             'resolved' => 'success',
+    //                             'closed' => 'danger',
+    //                         };
+    //                     })
+    //                     ->icon(function ($record) {
+    //                         return match ($record->status) {
+    //                             'reported' => 'heroicon-s-flag',
+    //                             'verified' => 'heroicon-s-check-circle',
+    //                             'in_progress' => 'heroicon-s-arrow-path',
+    //                             'resolved' => 'heroicon-s-check-circle',
+    //                             'closed' => 'heroicon-s-x-circle',
+    //                             default => 'heroicon-s-clock',
+    //                         };
+    //                     })
+    //                     ->formatStateUsing(function ($state) {
+    //                         return match ($state) {
+    //                             'reported' => 'Reported',
+    //                             'verified' => 'Verified',
+    //                             'in_progress' => 'In Progress',
+    //                             'resolved' => 'Resolved',
+    //                             'closed' => 'Closed',
+    //                         };
+    //                     }),
 
-                        TextEntry::make('created_at')
-                        ->label('Reported At')
-                        ->date()
-                        ->since()
-                        ->weight(FontWeight::Bold),
-
-
-                    ])
-                    ->columns([
-                        'sm' => 1,
-                        'md' => 2,
-                        'lg' => 2
-                    ]),
+    //                     TextEntry::make('created_at')
+    //                     ->label('Reported At')
+    //                     ->date()
+    //                     ->since()
+    //                     ->weight(FontWeight::Bold),
 
 
-                    RepeatableEntry::make('involved')
-                    ->label('Persons Involved')
-                    ->schema([
-                        TextEntry::make('name')
-                        ->label('Name')
-                        ->icon('heroicon-o-user')
-                        ->placeholder('-')
-                        ->weight(FontWeight::Bold),
-
-                        TextEntry::make('injury')
-                        ->label('Injury')
-                        ->placeholder('-'),
-                    ])
-                    ->columns([
-                        'sm' => 1,
-                        'md' => 2,
-                        'lg' => 2
-                    ]),
-
-                    InfoGroup::make([
-                        Fieldset::make('Description')
-                        ->schema([
-                            TextEntry::make('description')
-                            ->hiddenLabel()
-                            ->placeholder('-')
-                            ->markdown()
-                            ->html()
-                            ->columnSpanFull()
-                        ]),
-
-                        Fieldset::make('Recommendations')
-                        ->schema([
-                            TextEntry::make('recommendations')
-                            ->hiddenLabel()
-                            ->placeholder('-')
-                            ->markdown()
-                            ->html()
-                            ->columnSpanFull()
-                        ])
-                    ])
+    //                 ])
+    //                 ->columns([
+    //                     'sm' => 1,
+    //                     'md' => 2,
+    //                     'lg' => 2
+    //                 ]),
 
 
+    //                 RepeatableEntry::make('involved')
+    //                 ->label('Persons Involved')
+    //                 ->schema([
+    //                     TextEntry::make('name')
+    //                     ->label('Name')
+    //                     ->icon('heroicon-o-user')
+    //                     ->placeholder('-')
+    //                     ->weight(FontWeight::Bold),
 
-                ])
-                ->columns([
-                    'sm' => 1,
-                    'md' => 2,
-                    'lg' => 2
-                ]),
+    //                     TextEntry::make('injury')
+    //                     ->label('Injury')
+    //                     ->placeholder('-'),
+    //                 ])
+    //                 ->columns([
+    //                     'sm' => 1,
+    //                     'md' => 2,
+    //                     'lg' => 2
+    //                 ]),
 
-                InfoSec::make()
-                ->schema([
-                    RepeatableEntry::make('images')
-                    ->label('Attachments')
-                    ->schema([
-                        ImageEntry::make('image_path')
-                        ->hiddenLabel()
-                    ])
-                    ->grid([
-                        'default' => 1,
-                        'sm' => 1,
-                        'md' => 4,
-                        'lg' => 4
-                    ])
-                    ->contained(false)
-                ]),
-            ]);
-    }
-========
->>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource.php
+    //                 InfoGroup::make([
+    //                     Fieldset::make('Description')
+    //                     ->schema([
+    //                         TextEntry::make('description')
+    //                         ->hiddenLabel()
+    //                         ->placeholder('-')
+    //                         ->markdown()
+    //                         ->html()
+    //                         ->columnSpanFull()
+    //                     ]),
+
+    //                     Fieldset::make('Recommendations')
+    //                     ->schema([
+    //                         TextEntry::make('recommendations')
+    //                         ->hiddenLabel()
+    //                         ->placeholder('-')
+    //                         ->markdown()
+    //                         ->html()
+    //                         ->columnSpanFull()
+    //                     ])
+    //                 ])
+
+
+
+    //             ])
+    //             ->columns([
+    //                 'sm' => 1,
+    //                 'md' => 2,
+    //                 'lg' => 2
+    //             ]),
+
+    //             InfoSec::make()
+    //             ->schema([
+    //                 RepeatableEntry::make('images')
+    //                 ->label('Attachments')
+    //                 ->schema([
+    //                     ImageEntry::make('image_path')
+    //                     ->hiddenLabel()
+    //                 ])
+    //                 ->grid([
+    //                     'default' => 1,
+    //                     'sm' => 1,
+    //                     'md' => 4,
+    //                     'lg' => 4
+    //                 ])
+    //                 ->contained(false)
+    //             ]),
+    //         ]);
+    // }
 }
