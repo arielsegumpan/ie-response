@@ -24,13 +24,6 @@ class ListIncidents extends ListRecords
     {
         return [
             IncidentStatsTableOverview::class,
-// =======
-// <<<<<<<< HEAD:app/Filament/Responder/Resources/IncidentResource/Pages/ListIncidents.php
-//             Actions\CreateAction::make(),
-// ========
-//             Actions\CreateAction::make()->icon('heroicon-o-plus')->label('New Incident'),
-// >>>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2:app/Filament/Admin/Resources/IncidentResource/Pages/ListIncidents.php
-// >>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
         ];
     }
 }

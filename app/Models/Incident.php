@@ -19,7 +19,6 @@ class Incident extends Model
         'verified_by',
         'incident_number',
         'involved',
-        'injuries_damage',
         'recommendations',
         'description',
         'status',

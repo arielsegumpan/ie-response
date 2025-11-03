@@ -20,7 +20,9 @@ class ViewIncident extends ViewRecord
 
     protected function getActions(): array
     {
-        return [];
+        return [
+            Actions\EditAction::make(),
+        ];
     }
 
     public $location; // for use in infolist, in map picker

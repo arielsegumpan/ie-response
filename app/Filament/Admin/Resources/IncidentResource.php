@@ -473,7 +473,6 @@ class IncidentResource extends Resource
             'index' => Pages\ListIncidents::route('/'),
             'create' => Pages\CreateIncident::route('/create'),
             'edit' => Pages\EditIncident::route('/{record}/edit'),
-
             'view' => Pages\ViewIncident::route('/{record}'),
         ];
     }

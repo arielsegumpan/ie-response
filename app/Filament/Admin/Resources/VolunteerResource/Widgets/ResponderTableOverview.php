@@ -27,17 +27,17 @@ class ResponderTableOverview extends BaseWidget
 
         return [
             Stat::make('Pending Verification', $pendingCount)
-                ->description($total > 0 ? round(($pendingCount / $total) * 100, 1) . '% of total volunteers' : 'No volunteers yet')
+                ->description($total > 0 ? round(($pendingCount / $total) * 100, 1) . '% of total responders' : 'No responders yet')
                 ->descriptionIcon('heroicon-m-clock')
                 ->color('warning'),
 
-            Stat::make('Verified Volunteers', $verifiedCount)
-                ->description($total > 0 ? round(($verifiedCount / $total) * 100, 1) . '% of total volunteers' : 'No volunteers yet')
+            Stat::make('Verified Responders', $verifiedCount)
+                ->description($total > 0 ? round(($verifiedCount / $total) * 100, 1) . '% of total responders' : 'No responders yet')
                 ->descriptionIcon('heroicon-m-check-badge')
                 ->color('success'),
 
             Stat::make('Rejected Applications', $rejectedCount)
-                ->description($total > 0 ? round(($rejectedCount / $total) * 100, 1) . '% of total volunteers' : 'No volunteers yet')
+                ->description($total > 0 ? round(($rejectedCount / $total) * 100, 1) . '% of total responders' : 'No responders yet')
                 ->descriptionIcon('heroicon-m-x-circle')
                 ->color('danger'),
         ];
