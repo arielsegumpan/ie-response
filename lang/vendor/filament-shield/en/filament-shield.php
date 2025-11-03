@@ -34,11 +34,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-<<<<<<< HEAD
     'nav.group' => 'Roles & Permissions',
-=======
-    'nav.group' => 'Users & Roles',
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
     'nav.role.label' => 'Roles',
     'nav.role.icon' => 'heroicon-o-shield-check',
     'resource.label.role' => 'Role',

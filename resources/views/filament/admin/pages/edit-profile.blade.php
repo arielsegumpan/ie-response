@@ -1,6 +1,5 @@
 <x-filament-panels::page>
 
-<<<<<<< HEAD
         <x-filament-panels::header>
                 <x-slot name="heading">
                     {{ __('') }}
@@ -22,6 +21,4 @@
             /> --}}
         </x-filament-panels::form>
     </div>
-=======
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
 </x-filament-panels::page>
