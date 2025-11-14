@@ -7,11 +7,7 @@
         <div class="grid sm:grid-cols-2 sm:items-center gap-8">
             <div class="sm:order-2">
                 <div class="relative pt-[50%] sm:pt-[100%] rounded-lg">
-<<<<<<< HEAD
                     <img class="size-full absolute top-0 start-0 object-cover rounded-[2rem] lg:h-[550px]" src="{{ asset(Storage::url($this->featuredPost->featured_img)) ?? 'https://via.placeholder.com/560x550' }}" alt="{{ $this->featuredPost->title }}">
-=======
-                    <img class="size-full absolute top-0 start-0 object-cover rounded-[2rem] lg:h-[550px]" src="{{ asset(Storage::url($this->featuredPost->featured_img)) ?? 'https://via.placeholder.com/560x550' }}" alt="Blog Image">
->>>>>>> c2aafa8681cabc998adb21c22e39ae68f307e8b2
                 </div>
             </div>
 
