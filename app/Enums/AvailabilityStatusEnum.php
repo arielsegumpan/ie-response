@@ -22,6 +22,7 @@ enum AvailabilityStatusEnum: string implements HasIcon, HasColor, HasLabel
         };
     }
 
+
     public function getColor(): string | array | null
     {
         return match ($this) {

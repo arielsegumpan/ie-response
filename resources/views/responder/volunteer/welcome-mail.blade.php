@@ -28,8 +28,8 @@ Here’s what’s coming up:
 
 Your commitment to service inspires us. Together, we’ll build resilience, offer hope, and respond with heart.
 
-<x-mail::button :url="''">
-Reset Password
+<x-mail::button :url="route('filament.auth.auth.login')">
+Login Account
 </x-mail::button>
 
 Warm regards,<br>

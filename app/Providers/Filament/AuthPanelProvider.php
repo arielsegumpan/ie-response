@@ -31,6 +31,7 @@ class AuthPanelProvider extends PanelProvider
             ->path('auth')
             ->login()
             ->registration()
+            ->passwordReset()
             ->font('Poppins')
             ->brandLogo(asset('imgs/ie-logo.png'))
             ->brandLogoHeight('5rem')
