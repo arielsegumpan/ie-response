@@ -19,7 +19,7 @@ class UserProfile extends Model
         'emergency_contact',
         'emergency_contact_phone',
         'region_id',
-        'province_id',  
+        'province_id',
         'city_id',
         'barangay_id',
         'street',

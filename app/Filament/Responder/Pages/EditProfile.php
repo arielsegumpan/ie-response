@@ -377,7 +377,10 @@ class EditProfile extends Page implements HasForms
                     Tabs\Tab::make('Affiliation & Others')
                         ->icon('heroicon-m-user-group')
                         ->schema([
-                            
+                            Section::make('Skills')
+                            ->schema([
+                                
+                            ])
                         ]),
                 ])
                 ->contained(false)
